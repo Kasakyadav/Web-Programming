@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<link rel="stylesheet" href="Widget.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body class="day">
+
+<!-- 🌌 BACKGROUND -->
+<div class="background"></div>
+
+<div class="container">
+
+<h1>🌦 Weather App</h1>
+
+<div class="search-box">
+<input type="text" id="cityInput" placeholder="Enter city name">
+<button onclick="getWeather()">Search</button>
+<button onclick="getLocationWeather()">📍</button>
+</div>
+
+<div id="recent" class="recent"></div>
+
+<div class="card">
+<h2 id="cityName">City</h2>
+<img id="weatherIcon">
+<p id="temp">--</p>
+<p id="desc">--</p>
+<p id="humidity">--</p>
+<p id="wind">--</p>
+</div>
+
+<h3>Forecast</h3>
+<div id="forecast" class="forecast"></div>
+
+<h3>Temperature Trend</h3>
+<canvas id="tempChart"></canvas>
+
+<h3>Location Map</h3>
+<div id="map"></div>
+
+</div>
+
+<script src="WW.js"></script>
+</body>
+</html>
