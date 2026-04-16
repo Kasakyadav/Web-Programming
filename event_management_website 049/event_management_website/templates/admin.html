@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="text-align:center;">Admin Panel</h1>
+
+<br>
+
+<!-- ADD EVENT FORM -->
+<form method="POST" action="/admin/add" style="text-align:center; margin-bottom:30px;">
+    <input type="text" name="name" placeholder="Event Name" required>
+    <input type="text" name="date" placeholder="Date" required>
+    <input type="text" name="venue" placeholder="Venue" required>
+    <button type="submit">Add Event</button>
+</form>
+
+<!-- EVENTS TABLE -->
+<div class="table-container">
+
+<table class="admin-table">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>Action</th>
+    </tr>
+
+    {% for event in events %}
+    <tr>
+        <td>{{ event.name }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.venue }}</td>
+        <td>
+            <a href="/admin/edit/{{ loop.index0 }}" class="btn edit-btn">Edit</a>
+            <a href="/admin/delete/{{ loop.index0 }}" class="btn delete-btn">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="text-align:center;">✏️ Edit Event</h1>
+
+<form method="POST" style="text-align:center;">
+    <input type="text" name="name" value="{{ event.name }}" required>
+    <input type="text" name="date" value="{{ event.date }}" required>
+    <input type="text" name="venue" value="{{ event.venue }}" required>
+
+    <button type="submit">Update Event</button>
+</form>
+
+{% endblock %}

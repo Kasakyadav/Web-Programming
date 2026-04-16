@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Welcome to EventMaster </h1>
+    <p>Discover, explore, and register for amazing events happening around you</p>
+    <br>
+    <a href="/events" class="btn">Explore Events</a>
+</div>
+
+<!-- FEATURED EVENTS -->
+<h2 style="margin-top:40px;">🔥 Featured Events</h2>
+
+<div class="events">
+    {% for event in events[:2] %}
+    <div class="card">
+        <h3>{{ event.name }}</h3>
+        <p>📅 {{ event.date }}</p>
+        <p>📍 {{ event.venue }}</p>
+        <a href="/register" class="btn">Register</a>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- ABOUT -->
+<div style="margin-top:50px; text-align:center;">
+    <h2>About EventHub</h2>
+    <p style="max-width:600px; margin:auto;">
+        EventHub is a platform where users can explore upcoming events,
+        register easily, and stay updated with exciting activities.
+    </p>
+</div>
+
+{% endblock %}

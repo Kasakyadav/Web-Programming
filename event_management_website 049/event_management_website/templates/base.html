@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventMaster</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h2 style="color:white;">EventMaster</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/events">Events</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+      {% for msg in messages %}
+        <p style="color:green;">{{ msg }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+<footer class="footer">
+    <p>© 2026 EventMaster | Designed by Kasak</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+nav {
+    background: #020617;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav h2 {
+    color: #22d3ee;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #22d3ee;
+}
+
+/* CONTAINER */
+.container {
+    padding: 50px;
+    flex: 1;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #020617, #1e293b);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #22d3ee;
+}
+
+.hero p {
+    color: #94a3b8;
+}
+
+/* EVENTS GRID */
+.events {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #22d3ee;
+}
+
+.card h3 {
+    color: #22d3ee;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #22d3ee;
+    color: black;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #06b6d4;
+}
+
+/* FORM */
+form {
+    max-width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #020617;
+    border: 1px solid #1e293b;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: white;
+}
+
+form input:focus, form select:focus {
+    border-color: #22d3ee;
+    outline: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #22d3ee;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #06b6d4;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+/* SEARCH */
+.search-bar {
+    width: 60%;
+    margin: auto;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #020617;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+/* ADMIN TABLE */
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.admin-table {
+    width: 70%;
+    border-collapse: collapse;
+    background: #020617;
+}
+
+.admin-table th {
+    background: #22d3ee;
+    color: black;
+    padding: 12px;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* BUTTONS */
+.edit-btn {
+    background: #22d3ee;
+    color: black;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
